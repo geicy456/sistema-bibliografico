@@ -1,0 +1,20 @@
+ body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("/assets/img/Rectangle\ 1.png");
+    background-repeat: repeat-x;
+    background-position: bottom ;
+    height: 100vh;
+    width: 100vw; 
+}
+div{
+    background-color: rgba(#5C80D4, #5C80D4, #5C80D4, #5C80D4);
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: #ffff;
+
+    
+}

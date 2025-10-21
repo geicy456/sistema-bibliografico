@@ -1,0 +1,199 @@
+:root {
+    /* Cores baseadas na imagem */
+    --cor-fundo-principal: #4A90E2; /* Azul claro do topo e fundo */
+    --cor-card-cadastro: #5E6DE2; /* Roxo/Azul do card de cadastro */
+    --cor-input-fundo: #A3D8FF; /* Azul claro dos campos de input */
+    --cor-texto-principal: white;
+    --cor-botao-confirmar: #A3D8FF; /* Azul claro do botão Confirmar */
+    --cor-fundo-senai: #EBEBEB; /* Cinza claro da faixa inferior */
+    --cor-texto-escuro: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--cor-fundo-principal);
+}
+
+/* Container principal para o conteúdo e imagem de fundo simulada */
+.main-container {
+    flex-grow: 1;
+    display: flex;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Simulação da imagem de fundo com estantes de livros */
+.livros-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2)),
+                      linear-gradient(to bottom, #7bb9f0, #4A90E2);
+    /* Simulação de livros com degradê */
+    background-size: 100% 100%;
+    opacity: 0.9;
+    z-index: 0;
+}
+
+.livros-fundo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Simulação de cores dos 'livros' */
+    background-image: repeating-linear-gradient(90deg, 
+        rgba(163, 216, 255, 0.4), rgba(163, 216, 255, 0.4) 30px, 
+        rgba(255, 255, 255, 0.2) 30px, rgba(255, 255, 255, 0.2) 40px,
+        rgba(100, 100, 200, 0.4) 40px, rgba(100, 100, 200, 0.4) 70px,
+        rgba(200, 100, 100, 0.4) 70px, rgba(200, 100, 100, 0.4) 100px);
+    opacity: 0.5;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Estilos do logo e texto de boas-vindas */
+.boas-vindas {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    padding-top: 50px;
+}
+
+.logo-scriptoteca {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-circulo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icone-scriptoteca {
+    font-size: 40px;
+    color: #4A90E2; /* Cor azul do logo simulado */
+}
+
+.texto-logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4A90E2;
+    margin-top: 5px;
+}
+
+.texto-boas-vindas {
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--cor-texto-principal);
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos do Card de Cadastro */
+.card-cadastro {
+    background-color: var(--cor-card-cadastro);
+    padding: 30px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    margin-top: 50px;
+}
+
+.card-cadastro h2 {
+    color: var(--cor-texto-principal);
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-campo {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--cor-input-fundo);
+    color: var(--cor-texto-escuro);
+    font-size: 16px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    opacity: 0.9;
+}
+
+.input-campo::placeholder {
+    color: var(--cor-texto-escuro);
+}
+
+.btn-confirmar {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor-botao-confirmar);
+    color: var(--cor-texto-escuro);
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+.btn-confirmar:hover {
+    background-color: #BEE3FF;
+}
+
+/* Estilos da faixa inferior do SENAI */
+.faixa-senai {
+    background-color: var(--cor-fundo-senai);
+    padding: 10px 20px;
+    text-align: left;
+    border-top: 1px solid #ccc;
+}
+
+.logo-senai {
+    /* Simulação do logo do SENAI */
+    display: inline-block;
+    font-size: 12px;
+    color: #4A90E2;
+    font-weight: bold;
+    border-right: 1px solid #999;
+    padding-right: 10px;
+    margin-right: 10px;
+    line-height: 1.2;
+}
+
+.texto-senai {
+     font-size: 10px;
+     color: #666;
+     display: inline-block;
+     vertical-align: top;
+}

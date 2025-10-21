@@ -1,0 +1,123 @@
+n* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.black{
+   --fundo: #1F476C;
+   --QDestaque: #0B1B2A;
+   --borda:#B1B1B1;
+   --text-color: #ffff ;
+   --Quadro: #415b97;
+   --logo: #6390bb  ;
+}
+
+body.light {
+    --fundo: #589CDB;
+    --QDestaque: #ABC7E0;
+    --borda:#D9D9D9;
+    /*--text-color: #0000 ;*/
+    --Quadro: #5C80D4;
+    --logo: #98C9F6  ;
+}
+
+body {
+    background: var(--fundo);
+    max-height: 100vh;
+    z-index: -1;
+}
+
+.login{
+    background-image: url("/assets/img/Rectangle\ 1.png");
+    background-repeat: repeat-x;
+    background-position: bottom ;
+    height: 100vh;
+    width: 100vw; 
+}
+
+.logo{
+    width: 128px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: var(--logo) ;
+    background-image: url("/assets/img/Gemini_Generated_Image_49qkii49qkii49qk-removebg-preview\ 1.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin: -25px 10px;
+
+}
+
+header {
+    background: var(--borda);  
+    width: 100%;  
+    height: 40px;   
+    padding: 10px; 
+}
+
+footer{
+    background: var(--borda);  
+    width: 100%;  
+    height: 40px;
+    flex-shrink: 0;  
+}
+
+.texto{
+    color:var(--text-color) ;
+    width: 401px;
+    height: 285px;
+    font-size: xx-large;
+    margin: 45px 66px 69px;
+}
+
+.q_login{
+    background-color: var(--Quadro);
+    border: #000 solid 2px;
+    position: absolute;
+    right: 44px; 
+    bottom: 0;
+    height: 360px;
+    width: 316px;
+    padding: 10px;
+    align-items: center;
+}
+
+.titulo{
+    color:var(--text-color) ;
+    font-size: 36px;
+    margin-bottom: 22px;
+}
+
+input{
+    width: 210px;
+    height: 35px;
+    background-color: var(--logo);
+    margin-bottom: 13px;
+    padding: 5px;
+}
+
+.text_menor{
+    color: var(--text-color);
+    font-size:20px;
+    margin-top: 12px;
+}
+
+a{
+    text-decoration: none;
+    color: #b5d4fa;
+    display: inline;
+    margin-bottom: 12px;
+}
+
+button{
+    width: 121px;
+    height: 31px;
+    color: var(--text-color);
+    background-color: var(--logo);
+    align-items: center ;
+    border-radius: 32px;
+    padding: 5px;
+}
